@@ -1,0 +1,175 @@
+/*
+  VARIABLES DECLARATION ON ROOT
+*/
+:root {
+    --cyan: #2BB3B1;
+    --bright-yellow: hsl(71, 73%, 54%);
+    --light-grey: hsl(204, 43%, 93%);
+    --grayish-blue: hsl(218, 22%, 67%);
+}
+
+/*
+    IMPORTING FONTS FROM RELATIVE SOURCE
+*/
+@font-face {
+    font-family: "Karla Regular";
+    src: url('./Karla-Regular.ttf');
+}
+@font-face {
+    font-family: "Karla Bold";
+    src: url('./Karla-Bold.ttf');
+}
+
+/*
+    MANUAL CSS RESET
+*/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {   /* Ensures the device's maximum height */
+    height: 100%;
+}
+
+/*
+    BODY SECTION
+*/
+body {
+    font-family: 'Karla Regular', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    min-height: 100vh;
+    width: 100%;
+    display: grid;
+    place-items: center;
+    background: var(--light-grey);
+    padding: 1.5em 0;
+}
+
+/*
+    MAIN SECTION (CONTAINER ITSELF)
+*/
+main {
+    display: grid;
+    grid-template-rows: 17em 16em 16em;
+    width: 90%;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 20px 15px rgba(0,0,0,.1);
+}
+
+section {
+    display: grid;
+    align-content: space-around;
+    padding: 25px;
+}
+
+.main__first-section {
+    background: #f7f7f7;
+    color: var(--grayish-blue);
+}
+
+[class*='heading'] {
+    color: #ffffff;
+    font-size: 1.2em;
+    font-family: 'Karla Bold';
+    margin-bottom: 5px;
+}
+
+.main__first-heading{
+    color: var(--cyan);
+    font-size: 1.3em;
+    margin-bottom: 10px;
+}
+
+.main__highlighted {
+    color: var(--bright-yellow);
+    font-size: 1em;
+    font-family: 'Karla Bold';
+}
+
+.main__second-section {
+    background: var(--cyan);
+    color: var(--light-grey);
+}
+
+.main__second-heading {
+    line-height: .5em;
+}
+
+.main__subscription-price {
+    font-size: 2em;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 500;
+    color: #ffffff;
+    font-family: 'Karla Bold';
+}
+
+.main__subscription-duration {
+    font-size: .4em;
+    font-weight: 300;
+    color: var(--light-grey);
+}
+
+.main__sign-up-button {
+    width: 100%;
+    background: var(--bright-yellow);
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0 5px 10px rgba(0,0,0,.1);
+    font-weight: 700;
+    margin-top: 1.1em;
+    transition: .3s ease;
+    font-family: 'Karla Bold';
+}
+
+.main__sign-up-button:active {
+    transform: scale(.99) translateY(5px);
+    filter: brightness(.95);
+    box-shadow: unset;
+}
+
+.main__third-section {
+    background: #4ABEBD;
+    color: var(--light-grey);
+}
+
+.main__third-heading {
+    margin-bottom: 20px;
+}
+
+.main__description {
+    font-size: .9em;
+    line-height: 1.5em;
+}
+
+
+/*
+    MEDIA QUERIES (FOR RESPONSIVE DESIGN)
+*/
+@media (min-width: 37.5em) {   /* For Tablets */
+    
+    main {
+        grid-template: .8fr 1fr / 1fr 1fr;
+    }
+
+
+    [class*='section'] {
+        padding: 2.5em;
+    }
+
+    .main__first-section {
+        grid-column: 1/-1;
+    }
+
+}
+
+@media (min-width: 56.25em){    /* For Desktops */
+
+    main {
+        width: 45em;
+    }
+}
