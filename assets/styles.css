@@ -58,6 +58,18 @@ main {
     box-shadow: 0 20px 15px rgba(0,0,0,.1);
 }
 
+.main__heading--sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
 section {
     display: grid;
     align-content: space-around;
@@ -65,26 +77,25 @@ section {
 }
 
 .main__first-section {
-    background: #f7f7f7;
+    background: #fff;
     color: var(--grayish-blue);
 }
 
 [class*='heading'] {
     color: #ffffff;
-    font-size: 1.2em;
     font-family: 'Karla Bold';
     margin-bottom: 5px;
 }
 
 .main__first-heading{
     color: var(--cyan);
-    font-size: 1.3em;
     margin-bottom: 10px;
+    font-weight: normal;
 }
 
 .main__highlighted {
     color: var(--bright-yellow);
-    font-size: 1em;
+    font-size: 1.2rem;
     font-family: 'Karla Bold';
 }
 
@@ -102,21 +113,20 @@ section {
     display: flex;
     align-items: center;
     gap: 10px;
-    font-weight: 500;
     color: #ffffff;
     font-family: 'Karla Bold';
 }
 
 .main__subscription-duration {
-    font-size: .4em;
-    font-weight: 300;
+    font-size: .5em;
+    font-weight: 200;
     color: var(--light-grey);
 }
 
 .main__sign-up-button {
     width: 100%;
     background: var(--bright-yellow);
-    padding: 10px;
+    padding: 15px;
     border-radius: 5px;
     text-align: center;
     box-shadow: 0 5px 10px rgba(0,0,0,.1);
@@ -142,7 +152,7 @@ section {
 }
 
 .main__description {
-    font-size: .9em;
+    font-size: .9rem;
     line-height: 1.5em;
 }
 
@@ -170,6 +180,6 @@ section {
 @media (min-width: 56.25em){    /* For Desktops */
 
     main {
-        width: 45em;
+        width: 39.6875rem;
     }
 }
